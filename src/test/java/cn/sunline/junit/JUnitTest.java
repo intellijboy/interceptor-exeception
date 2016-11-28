@@ -10,11 +10,26 @@ package cn.sunline.junit;
 
 import org.junit.Test;
 
+import cn.sunline.entity.Admin;
+import cn.sunline.entity.User;
+
 public class JUnitTest {
 		
 	@Test
 	public void Test(){
 		System.out.println("hello");
+	}
+	
+	
+	@Test
+	public void TestException(){
+	//	System.out.println("hello");
+		try {
+			Object obj = new User();
+			Admin admin = (Admin) obj;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	

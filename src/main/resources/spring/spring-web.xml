@@ -22,6 +22,8 @@
 	<context:component-scan base-package="cn.sunline.control">
 		<context:include-filter type="regex"
 			expression="cn.sunline.control.include.*" />
+		<context:include-filter type="regex"
+			expression="cn.sunline.exception/control.* "/>
 		<context:exclude-filter type="regex"
 			expression="cn.sunline.entity.exclude*" />
 	</context:component-scan>
