@@ -7,11 +7,15 @@
  * 版  本：1.0
  */
 package cn.sunline.entity;
+
+import org.springframework.stereotype.Component;
+
 /**
  * 管理员
  * @author 刘卜铷
  * @date 2016年11月25日 下午5:14:20
  */
+@Component
 public class Admin {
 	/**
 	 * 编号

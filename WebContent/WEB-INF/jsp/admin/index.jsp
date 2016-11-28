@@ -4,12 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>首页</title>
+<title>管理员首页</title>
 </head>
 <body>
-	<h1>欢迎来到首页</h1>
+	<h1>欢迎来到管理员首页</h1>
 	<h2>1:${sessionScope.admin.name}</h2>
 	<h2>2:${admin}</h2>
 	<h2>3:${admin.name}</h2>
+	<a href="<%=request.getServletContext().getContextPath() %>/admin/user_manager">管理页面</a>
+	<a href="<%=request.getServletContext().getContextPath() %>/admin/exit">退出</a>
 </body>
 </html>

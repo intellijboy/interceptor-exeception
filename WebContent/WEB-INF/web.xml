@@ -60,6 +60,27 @@
 		<servlet-name>dispatcherServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+	
+	<!--自定义过滤器  -->
+	
+	<filter>
+			<filter-name>userLoginFilter</filter-name>
+			<filter-class>cn.sunline.filter.UserLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+			<filter-name>userLoginFilter</filter-name>
+			<url-pattern>/user_login.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+			<filter-name>adminLoginFilter</filter-name>
+			<filter-class>cn.sunline.filter.AdminLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+			<filter-name>adminLoginFilter</filter-name>
+			<url-pattern>/admin_login.jsp</url-pattern>
+	</filter-mapping>
 
 
 

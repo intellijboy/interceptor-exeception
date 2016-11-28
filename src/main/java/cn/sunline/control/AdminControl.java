@@ -8,8 +8,6 @@
  */
 package cn.sunline.control;
 
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
@@ -29,14 +27,26 @@ public class AdminControl {
 	 */
 	@RequestMapping("index")
 	public String toIndexPage(){
-		return "index";
+		return "admin/index";
 	}
 	
+	
+	@RequestMapping("user_manager")
+	public String toUserMangerPage(){
+		return "admin/user_manager";
+	}
 	
 	@RequestMapping("login")
 	public String adminLogin(Admin admin,HttpServletRequest request){
 		request.getSession().setAttribute("admin", admin);
-		return "index";
+		return "redirect:/admin/index";
+	}
+	
+	@RequestMapping("exit")
+	public String adminExit(HttpServletRequest request){
+		request.getSession().removeAttribute("admin");
+		request.getSession().getAttribute("admin");
+		return "redirect:/admin_login.jsp";
 	}
 	
 	
