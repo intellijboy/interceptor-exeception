@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
  * @author 刘卜铷
  * @date 2016年11月25日 下午5:14:20
  */
-@Component
 public class Admin {
 	/**
 	 * 编号

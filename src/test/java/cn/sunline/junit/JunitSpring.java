@@ -16,6 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import cn.sunline.control.exclude.ExcludeCompoment;
 import cn.sunline.entity.Admin;
+import cn.sunline.entity.User;
 import cn.sunline.vo.Car;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -25,6 +26,12 @@ public class JunitSpring {
 	
 	@Autowired(required=false)
 	private Admin admin;
+	
+	
+	@Autowired(required=false)
+	private User user;
+	
+	
 	
 	@Autowired(required=false)
 	private Car car;
@@ -36,6 +43,7 @@ public class JunitSpring {
 	@Test
 	public void TestAtuware(){
 		System.out.println("admin==>"+admin);
+		System.out.println("user==>"+user);
 		System.out.println("compoment==>"+compoment);
 		System.out.println("car==>"+car);
 	}

@@ -6,7 +6,7 @@
  * 描  述：
  * 版  本：1.0
  */
-package cn.sunline.exeception.control;
+package cn.sunline.exeception.advice;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -19,13 +19,13 @@
 		type="regex" expression="cn.sunline.vo.*"/> <context:exclude-filter type="regex" 
 		expression="cn.sunline.entity.*"/> </context:component-scan> -->
 
-	<context:component-scan base-package="cn.sunline.control">
+	<context:component-scan base-package="cn.sunline.control" >
 		<context:include-filter type="regex"
 			expression="cn.sunline.control.include.*" />
 		<context:include-filter type="regex"
-			expression="cn.sunline.exception/control.* "/>
+			expression="cn.sunline.exception.advice.* "/>
 		<context:exclude-filter type="regex"
-			expression="cn.sunline.entity.exclude*" />
+			expression="cn.sunline.control.exclude.*" />
 	</context:component-scan>
 
 
@@ -70,6 +70,18 @@
 		</mvc:interceptor>
 		
 	</mvc:interceptors>
+	
+	
+	
+	<!-- 配置使用 SimpleMappingExceptionResolver 来映射异常 -->
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionAttribute" value="ex"></property>
+		<property name="exceptionMappings">
+			<props>
+				<prop key="cn.sunline.exception.MyNumberException">error/xml_mapper_error</prop>
+			</props>
+		</property>
+	</bean>	
 	
 	
 

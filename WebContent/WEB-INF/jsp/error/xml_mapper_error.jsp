@@ -4,13 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>错误页面</title>
+<title>错误页面2</title>
 </head>
 <body>
-<h1>错误页面</h1>
-<h3>错误信息：${ex }</h3>
-<c:forEach var="exItem"  items="${ex_trace }" varStatus="index">
-		<p>${exItem }</p>
-</c:forEach>
+<h1>错误页面2</h1>
+<h3>错误信息2：${ex }</h3>
 </body>
 </html>

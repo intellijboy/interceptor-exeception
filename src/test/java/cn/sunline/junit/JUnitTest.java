@@ -28,7 +28,22 @@ public class JUnitTest {
 			Object obj = new User();
 			Admin admin = (Admin) obj;
 		} catch (Exception e) {
+			System.out.println(e.getStackTrace());
 			e.printStackTrace();
+			System.out.println("end");
+			StackTraceElement[] stackTrace = e.getStackTrace();
+			String className;
+			String fileName;
+			String methodName ;
+			int lineNumber;
+			for (int i = 0; i < stackTrace.length; i++) {
+				StackTraceElement stackTraceElement = stackTrace[i];
+				className = stackTraceElement.getClassName();
+				fileName = stackTraceElement.getFileName();
+				methodName = stackTraceElement.getMethodName();
+				lineNumber = stackTraceElement.getLineNumber();
+				System.out.println(className+"."+methodName+"("+fileName+"):"+lineNumber);
+			}
 		}
 	}
 	
